@@ -1,45 +1,33 @@
-Crashlog created at 2019-04-23 10:53:31 -0400
+Crashlog created at 2019-04-26 17:34:25 -0400
 
 ===== MESSAGE:
 
-TypeError: expected numeric
+ArgumentError: wrong number of arguments (given 0, expected 1)
 
 ===== ITEM BEING COMPILED:
 
-Current item: /content/lectures/schedule.ical.erb (:default representation)
+Current item: /content/intro/welcome.md.erb (:default representation)
 
 ===== STACK TRACE:
 
-  0. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/core_ext/date/calculations.rb:94:in `+'
-  1. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/core_ext/date/calculations.rb:94:in `plus_with_duration'
-  2. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/data/citem.rb:65:in `schedule_end_date_time'
-  3. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/data/data_adaptor.rb:38:in `cell_value'
-  4. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/schedule/schedule_feed.rb:27:in `render_event'
-  5. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/schedule/schedule_feed.rb:20:in `block in render_all_events'
-  6. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/data/data_adaptor.rb:17:in `block in rows'
-  7. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/forwardable.rb:230:in `each'
-  8. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/forwardable.rb:230:in `each'
-  9. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/data/data_adaptor.rb:16:in `rows'
-  10. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/schedule/schedule_feed.rb:19:in `render_all_events'
-  11. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/schedule/schedule_feed.rb:13:in `render'
-  12. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/helpers/ical_feed_helpers.rb:6:in `generate_ical'
-  13. item /content/lectures/schedule.ical.erb (rep default):1:in `get_binding'
-  14. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `eval'
-  15. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `result'
-  16. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/filters/erb.rb:36:in `run'
-  17. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/filter.rb:158:in `setup_and_run'
-  18. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/executor.rb:22:in `filter'
-  19. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:30:in `block in run'
-  20. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `block in each'
-  21. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
-  22. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
-  23. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:27:in `run'
-  24. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
-  25. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
-  26. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/cache.rb:23:in `run'
-  27. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
-  28. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
-  29. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/resume.rb:16:in `block in run'
+  0. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/helpers/content_helpers.rb:4:in `include_topic'
+  1. item /content/intro/welcome.md.erb (rep default):5:in `get_binding'
+  2. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `eval'
+  3. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `result'
+  4. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/filters/erb.rb:36:in `run'
+  5. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/filter.rb:158:in `setup_and_run'
+  6. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/executor.rb:22:in `filter'
+  7. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:30:in `block in run'
+  8. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `block in each'
+  9. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
+  10. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
+  11. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:27:in `run'
+  12. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
+  13. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
+  14. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/cache.rb:23:in `run'
+  15. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
+  16. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
+  17. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/resume.rb:16:in `block in run'
 
 ===== VERSION INFORMATION:
 
