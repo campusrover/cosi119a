@@ -84,15 +84,7 @@ h1, h2, h3, h4, h5{
 
 h3 {
   padding-top: 20px;
-  /* padding-bottom: 10px; */
 }
-
-/* h3.body-header {
-  margin-left: -15px;
-  margin-top: -10px;
-  margin-right: -15px;
-  margin-bottom: -22px;
-} */
 
 h4 {
 	margin-top: 20px;
@@ -102,8 +94,7 @@ h4 {
 
 h5 {
 	margin-top: 15px;
-  font-weight: bold;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 
 body {

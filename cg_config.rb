@@ -8,7 +8,7 @@ AWS_BUCKET = "cosi119a".freeze
 
 # Course short name
 COURSE_SHORT_NAME = "Cosi 119a".freeze
-COURSE_LONG_NAME = "Autonomous Robotics Lab ".freeze
+COURSE_LONG_NAME = "Autonomous Robotics".freeze
 COURSE_ABBREV = "cs119a".freeze
 
 # Schedule information. Note that Monday is day 0
