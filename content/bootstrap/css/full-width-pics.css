@@ -9,20 +9,16 @@ body {
 }
 
 .image-bg-fluid-height {
-    background-image: url('/bootstrap/images/image22.jpg');
+    background-image: url('/bootstrap/images/image10.jpg');
     background-size: cover;
     background-size: cover;
     padding: 100px 0;
 }
 
 .image-bg-fixed-height {
-<<<<<<< HEAD
-    background-image: url('/bootstrap/images/image22.jpg');
+    background-image: url('/bootstrap/images/image10.jpg');
     background-size: cover;
     background-size: cover;
-=======
-	background: url('/bootstrap/images/image10.jpg') no-repeat center center scroll;
->>>>>>> bd5279ec54e526689b26cf433c7dd1f3b247846f
     height: 70px;
 }
 
