@@ -27,6 +27,7 @@ SECTION_CONFIG = [
   SectionDef.new("Intro", "intro", type: :section, bullet: :star),
   SectionDef.new("Lectures", "lectures", type: :lecture, schedule: LECTURES_SCHEDULE_CONFIG,
                   bullet: :dash),
+  SectionDef.new("background", "background", hidden: false, type: :section),
   SectionDef.new("Topics", "topics", hidden: true, type: :section),
   SectionDef.new("Extras", "extras", hidden: true, type: :section)
 ].freeze
