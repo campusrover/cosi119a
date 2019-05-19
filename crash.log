@@ -1,8 +1,8 @@
-Crashlog created at 2019-05-19 12:30:44 -0400
+Crashlog created at 2019-05-19 13:50:45 -0400
 
 ===== MESSAGE:
 
-RuntimeError: TOC#lookup_citem_by_identifier failed to find: '/content/lectures/index.html'
+RuntimeError: TOC#lookup_citem_by_identifier failed to find: '/content/lectures/part2/index.html'
 
 ===== STACK TRACE:
 
