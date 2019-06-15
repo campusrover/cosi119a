@@ -1,32 +1,8 @@
-Crashlog created at 2019-06-14 23:07:53 -0400
+Crashlog created at 2019-06-15 14:28:40 -0400
 
 ===== MESSAGE:
 
-SyntaxError: item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):37: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
-        Understand the code for the CR state manage...
-                   ^~~
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):37: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
-... Understand the code for the CR state manager",
-...                             ^~
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):38: syntax error, unexpected tCONSTANT, expecting ')'
-        "Think about desired behavior in a ...
-         ^~~~~
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):38: syntax error, unexpected in, expecting ')'
-...Think about desired behavior in a robot and how to turn them...
-...                             ^~
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):38: syntax error, unexpected backslash, expecting ')'
-...itions") ).to_s); _erbout.<< "\n  ".freeze
-...                              ^
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):39: syntax error, unexpected backslash, expecting ')'
-...( ul_end ).to_s); _erbout.<< "\n".freeze
-...                              ^
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):40: syntax error, unexpected backslash, expecting ')'
-...( ul_end ).to_s); _erbout.<< "\n".freeze
-...                              ^
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):41: syntax error, unexpected backslash, expecting ')'
-...stit_end ).to_s); _erbout.<< "\n\n\n#### How Do Robots Know ...
-...                              ^
-item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):55: syntax error, unexpected end-of-input, expecting ')'
+ArgumentError: wrong number of arguments (given 0, expected 1)
 
 ===== ITEM BEING COMPILED:
 
@@ -34,22 +10,24 @@ Current item: /content/topics/roboticsbigideas/whattodo.md.erb (:default represe
 
 ===== STACK TRACE:
 
-  0. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `eval'
-  1. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `result'
-  2. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/filters/erb.rb:36:in `run'
-  3. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/filter.rb:158:in `setup_and_run'
-  4. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/executor.rb:22:in `filter'
-  5. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:30:in `block in run'
-  6. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `block in each'
-  7. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
-  8. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
-  9. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:27:in `run'
-  10. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
-  11. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
-  12. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/cache.rb:23:in `run'
-  13. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
-  14. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
-  15. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/resume.rb:16:in `block in run'
+  0. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coursegen-0.7.4/lib/coursegen/course/helpers/content_helpers.rb:276:in `postit_begin'
+  1. item /content/topics/roboticsbigideas/whattodo.md.erb (rep default):1:in `get_binding'
+  2. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `eval'
+  3. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/2.6.0/erb.rb:901:in `result'
+  4. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/filters/erb.rb:36:in `run'
+  5. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/filter.rb:158:in `setup_and_run'
+  6. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/executor.rb:22:in `filter'
+  7. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:30:in `block in run'
+  8. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `block in each'
+  9. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
+  10. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/entities/action_sequence.rb:54:in `each'
+  11. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/recalculate.rb:27:in `run'
+  12. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
+  13. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
+  14. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/cache.rb:23:in `run'
+  15. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:21:in `call'
+  16. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/abstract.rb:23:in `block in call'
+  17. /Users/pitosalas/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/nanoc-4.11.0/lib/nanoc/base/services/compiler/phases/resume.rb:16:in `block in run'
 
 ===== VERSION INFORMATION:
 
