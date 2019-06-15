@@ -3,120 +3,16 @@ title: The "Big Ideas"
 ---
 *Based on and extended from: [Touretzky, D. S. (2013). Robotics for computer scientists: what’s the big idea?](https://doi.org/10.1080/08993408.2013.847226)*
 
-##### 1. How Do Robots Know What To Do?
-
-1. **Big idea:** Autonomous robot behaviors are mechanisms constructed from carefully designed algorithms and representations.
-2. **Underlying technology:** event-based architectures and hierarchically structured, parallel state machines.
-3. **Learning goal, students will understand:**
-   1. the role of state management, concurrency and a distributed architecture in Robot behavior.
-   1. students will be able to explain the distributed OS principles of ROS
-4. **Skill goals: Students will be able to:**
-   1. write a ROS node; write several interoperating ROS nodes
-   1. understand the code for the CR state manager
-   1. think about desired behavior in a robot and how to turn them into states and transitions
-
-##### 2. How do robots perceive what is going on around them?
-1. **Big idea:** Robotics is extensively sensor driven
-1. **Underlying technologies:**
-   1. Lidar
-   1. Odometry from servo motors
-   1. Touch detectors
-   1. GPS, Accelerometer
-1. **Learning goal: Students will understand**
-   1. Why sensors are crucial
-   1. What kinds of sensors typical robots will have and what their purpose is
-1. **Skill goals: Students will be able to:**
-   1. Examine and show information being genrated by sensors, e.g. Lidar. Display this graphically and use it in a program
-   1. Program a robot to perform a "roomba" pattern in a closed arena.
-   
-##### 3. How do robots orient themselves in space?
-1. **Big idea:** The importance of coordinate systems
-1. **Underlying technologies:**
-   1. Math
-1. **Learning goal: Students will understand**
-   1. That there are different coordinate systems
-   1. The standard data representations for positions and poses
-   1. The transformations betwen coordinate systems
-1. **Skill goals: Students will be able to:**
-
-##### 4. How Do Robots Know Where They Are?
-
-1. **Big idea:**  Robots estimate their position and orientation in the world using a combination of odometry, visual land- marks, and other types of sensory information.
-1. **Underlying technologies:**
-   1. Particle filters
-   1. SLAM
-1. **Learning goal: Students will understand**
-   1. The uses and limitations of odometry and visual landmarks,
-   1. the basic principles of particle filters, and how particle filters are used for localization.
-1. **Skill goals: Students will be able to:**
-   1. Demonstrate a robot avoiding obstacles using AMCL
-   1. demonstrate effective robot navigation behavior by arranging landmarks appropriately in the environment and invoking the Pilot’s localization mechanism as needed to determine their robot’s position.
-
-##### 5. How Do Robots See The World?
-1. **Big idea:** Robots use sophisticated but imperfect computer vision algorithms to deduce real world object representations from arrays of pixels.
-1. **Underlying technologies:**
-   1. basic vision algorithms (e.g., Hough transforms AprilTags [10], 
-   1. SIFT (Scale-Invariant Feature Transform) [7]1. face detection
-1. **Learning goal: Students will understand**
-   1. Both the capabilities and limitations of state of the art machine perception algorithms.
-1. **Skill goals: Students will be able to:**
-   1. Use the MapBuilder to demonstrate the function of several built-in vision algorithms, and use these components effectively in robotics applications.
-
-##### 6. How Do Robots Know Where To Go?
-1. **Big idea:** Robots navigate through the world using a path planner to search for routes around obstacles and an execution monitor to ensure that the robot stays on the path.
-1. **Underlying technologies:**
-   1. RRTs (Rapidly-exploring Random Trees)
-1. **Learning goal: Students will understand**
-   1. Concept of a stochastic search algorithm
-   1. How the RRT-Connect algorithm is used for path planning, and how planning can fail.
-1. **Skill goals: Students will be able to:**
-   1. Invoke one of the Pilot’s path planners to plan and execute paths through environments containing obstacles.
-
-##### 7. How Do Robots Control Their Bodies?
-1. **Big idea:** Robots describe their bodies as kinematic trees and use kinematics solvers to translate between joint angles and body coordinates.
-1. **Underlying technologies:**
-   1. Kinematic description files, forward and inverse kinematics solvers.
-1. **Learning goal: Students will understand**
-   1. Students will understand kinematic descriptions expressed as trees of joints and links
-   1. How kinematics solvers use this representation when translating between world coordinates and joint coordinates.
-1. **Skill goals: Students will be able to:**
-   1. Students will be able to construct and visualize kinematic descriptions using Tekkotsu’s DH Wizard tools
-   1. Invoke kinematics solvers via the Lookout or Grasper to produce desired robot motions.
-
-##### 8. What if a Robot Becomes Too Complex For One Person To Fully Understand It?
-1. **Big idea:** Robots are complex software systems that em- ploy standard abstraction and software engineering techniques to manage complexity.
-1. **Underlying technologies:**
-   1. Tools such as object oriented design, coding standards, open source
-   1. Source code management, Automated testing
-1. **Skill goals: Students will be able to:**
-   1. Students will be able to search and navigate through the extensive online documentation (over 3500 web pages)
-   1. Make appropriate use of abstraction mechanisms (e.g., write classes that inherit from predefined node types, 1. Create appropriate enumerated types for state machine signaling), produce code that conforms to Tekkotsu coding conventions, and give a picture of the modular organization of Tekkotsu in terms of directories and namespaces.
-
-##### 9. How Do We Calculate the Quantities Needed To Make A Robot Function?
-1. **Big idea:** Geometry, trigonometry, and linear algebra are the mathematical underpinnings of much of robotics.
-1. **Underlying technologies:**
-   1. Tekkotsu’s angular arithmetic classes and fmat matrix/vector manipulation package.
-1. **Learning goal: Students will understand**
-   1. Frames of reference, angular and vector arithmetic, homogeneous coordinates, coordinate transformation matrices
-   1. how these concepts are applied in robotics.
-1. **Skill goals: Students will be able to:**
-   1. Students will be able to solve simple kinematics problems using Tekkotsu’s built-in kinematics solvers and matrix/vector classes.
-
-##### 10. How can robots solve complex problems?
-1. **Big idea:** Robots use task planning to search a space of world states to find a path to a goal state
-1. **Underlying technologies:**
-   2. Robots use task planning to search a space of world states to find a path to a goal state
-   1. Task planners; domain description languages; plan execution and monitoring architectures
-
-##### 11. How should Robots Behave around people?
-1. **Big idea:** Successful human–robot interaction requires awareness of humans in the environment and adherence to social con- ventions such as not following too closely
-1. **Underlying technologies:**
-   1. Human-tracking tools such as the Microsoft Kinect; face and gesture recognition software;
-   1. Speech recognition systems; natural language dialog sys- tems
-   1. Who or what is the robot attending to, focused on?
-    
-##### 12. How should robots work together?
-1. **Big idea:** Human-tracking tools such as the Microsoft Kinect; face and gesture recognition software; speech recognition systems; natural language dialog sys- tems
-1. **Underlying technologies:**
-   2. Communication primitives; multi-robot planners
+<%= include_topic :whattodo %>
+<%= include_topic :perceive %>
+<%= include_topic :orient %>
+<%= include_topic :wheretheyare %>
+<%= include_topic :seetheworld %>
+<%= include_topic :wheretogo %>
+<%= include_topic :controlbody %>
+<%= include_topic :calculate %>
+<%= include_topic :complex %>
+<%= include_topic :complexprobs %>
+<%= include_topic :people %>
+<%= include_topic :worktogether %>
 

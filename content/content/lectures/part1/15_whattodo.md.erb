@@ -5,17 +5,25 @@ homework: 1) foo; 2) bar
 cat: general
 ---
 <%= homework_hdr %>
-   * Reading: PRR - Chapters 4, 5, 6
-   * RosBook Chapters 4,5,6
+* Reading: PRR - Chapters 3, 4 (Refer to <%= link_to_topic :ros_topics %>, <%= link_to_topic :ros_services %>)
 
+<%= include_topic :whattodo %>
 
-* Content:
-   * Autonomous robot behaviors are mechanisms constructed from carefully designed algorithms and representations.
-   * What's an operating system?
-   * Robot behavior is inherrently concurrent and the code therefore his highly concurrent
-   * Requires the use of some kind of distributed operating system
-   * Distributed nature of behavior
-   * ROS nodes, topics and messages
+### Chapter 3
+<%= include_topic :ros_topics %>
+
+### Chapter 4
+<%= include_topic :ros_services %>
+
+#### Review
+* Autonomous robot behaviors are mechanisms constructed from carefully designed algorithms and representations.
+* What's an operating system?
+* Robot behavior is inherrently concurrent and the code therefore his highly concurrent
+* Requires the use of some kind of distributed operating system
+* Distributed nature of behavior
+* ROS nodes, topics and messages
+
+#### Hands On
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
