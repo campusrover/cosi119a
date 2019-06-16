@@ -20,8 +20,17 @@ compile '/content/scripts/**/*' do
   nil
 end
 
-compile "/content/tipuesearch/tipuesearch_content.js.erb" do
-  filter :erb
+route '/tipuesearch/**/*' do
+  @item.identifier.to_s
+end
+
+route "/content/tipuesearch/tipuesearch_content.*" do
+  '/tipuesearch/tipuesearch_content.js'
+end
+
+# Output the search page
+route '/tipuesearch/search.md.erb' do
+  '/tipuesearch/search/index.html'
 end
 
 compile '/**/*.ical.erb' do
