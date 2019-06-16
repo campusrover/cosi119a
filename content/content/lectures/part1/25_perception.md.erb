@@ -1,24 +1,90 @@
 ---
-title: How do robots perceive what is going on around them?
-desc: Big Themes
-homework: 1) foo; 2) bar
-cat: general
+title: How do robots perceive
+desc: Sensors of various kinds are essential to robotics
+homework: 1) Read paper
+cat: fundamentals
 ---
 <%= include_topic :perceive %>
 
 <%= homework_hdr %>
-* <%= pdfbadge %> Read "Real Robots Don't Drive Straight. <%= deliverable "Answer the following warmups" %>
 
-* Content:
-   * Sensors are essentia!
-   * Lidar
-   * Cameras and depth Cameras
-   * Touch detectors
-   * GPS, accelerators
-   * Odometry
+1. <%= pdfbadge %> Read "Real Robots Don't Drive Straight. <%= deliverable "Answer the following warmups" %>
 
-* Homework due this week:
- 
+#### How do Robots Perceive?
+
+* Sensors are essential
+   * What is a sensor?
+   * Is it an input or output device?
+   * What happens to the sensing information
+   * How is it stored and detected and acted upon?
+
+* Example: Lidar
+   * What is a Lidar
+   * What does it look like and how does it work?
+   * "Time of travel" detector
+   * What does the data look like?
+
+* Show code example of Lidar data
+* Subtleties:
+   * What do the directions mean?
+   * Are the directions absolute or relative?
+   * What if the robot is not pointing to where you think?
+   * Do they go clockwise or counterclockwise?
+   * Lets look at the data!
+   * It's not clean! (This is typical for all sensors)
+   * It is not accurate!
+   * It's sometimes wildly inaccurate
+   * It is constantly flooding in
+
+* Types of Sensors
+   * Is a sensor an input or output device?
+   * Is a keyboard a sensor?
+   * Is a joystick a sensor?
+   * Is a map a sensor?
+   * Active Vs. Passive
+   * Sensor Fusion
+
+* Lidar
+   * History
+   * How it works
+   * Key characteristics or features
+   * What data it provides
+
+* Motor (encoder)
+   * How it works
+   * Key characteristics or features
+   * What data it provides
+
+* Camera
+   * How it works
+   * Key Characteristics or features
+   * What Data it provides
+
+* Depth Camera
+   * How it works
+   * Key Characteristics or features
+   * What data it provides
+
+* Sonar
+   * How it works
+   * Key Characteristics or features
+   * What data it provides
+
+* Bump sensors
+   * How it works
+   * Key Characteristics or features
+   * What data it provides
+
+* Magnetometer, barometer, accelerometer
+   * How it works
+   * Key Characteristics or features
+   * What data it provides
+
+* GPS
+   * How it works
+   * Key Characteristics or features
+   * What data it provides
+
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
 
