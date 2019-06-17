@@ -1,12 +1,18 @@
-Crashlog created at 2019-06-16 22:01:08 -0400
+Crashlog created at 2019-06-17 15:57:16 -0400
 
 ===== MESSAGE:
 
-SyntaxError: item /content/topics/robotics_bigideas/calculate.md.erb (rep default):16: syntax error, unexpected end-of-input, expecting ')'
+SyntaxError: item /content/lectures/part1/15_rosfundamentals.md.erb (rep default):9: syntax error, unexpected '<', expecting ')'
+<%= include_topic :ros_topics ...
+^
+item /content/lectures/part1/15_rosfundamentals.md.erb (rep default):15: unterminated string meets end of file
+...o_next_lecture ).to_s); _erbout
+...                               ^
+item /content/lectures/part1/15_rosfundamentals.md.erb (rep default):15: syntax error, unexpected end-of-input, expecting ')'
 
 ===== ITEM BEING COMPILED:
 
-Current item: /content/topics/robotics_bigideas/calculate.md.erb (:default representation)
+Current item: /content/lectures/part1/15_rosfundamentals.md.erb (:default representation)
 
 ===== STACK TRACE:
 

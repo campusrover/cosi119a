@@ -6,8 +6,32 @@ cat: fundamentals
 ---
 <%= homework_hdr %>
 
+#### Discussion
+
 * Think: Given these sensors how would you detect that you are about the crash into a wall?
 * Think: How would you compute the angle at which you are approaching the wall?
+
+#### How it works in ROS
+* All your code (almost) in ROS is a node
+* All information (almost) is transferred in the form of messages
+* Sensors
+  * Are electronic devices
+  * Wired to the built in computer
+  * In the case of the TB3, wired to the Arduino
+  * Code on the Arduino read the i/o and participate as a node in ROS
+  * Publishing information
+* ROS info required
+  * What is the "topic" that the device publishes to
+  * How frequently does it publish (e.g. 10 times per second, once every second)
+  * And what is the message type
+* Acting on the sensor data
+  * A node subscribes to that topic
+  * Writes a "handler" which is invoked each time the sensor node publishes
+
+#### Example: Lidar
+
+
+
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
