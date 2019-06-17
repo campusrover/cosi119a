@@ -2,13 +2,65 @@
 title: How do mobile Robots move
 cat: fundamentals
 desc: Wheels, legs and other ways for robots to move around 3D space
-hw: tbd
+hw: fundamentals
 ---
 <%= include_topic :effect %>
 
 <%= homework_hdr %>
 
+#### Steering Wheeled vehicles
 
+##### Our goal
+* Software needs to be able to command the robot
+* Consider micro and macro
+  * Steer from Waltham to Boston
+  * Steer from Shapiro to Usdan
+  * Stay in a lane
+  * Drive in a straight road
+  * Turn a corner
+  * Make a 90 degree turn
+  * Simply drive in a straight line
+* At the micro level:
+  * Move at x Meters/second
+  * Turn at 10 degrees/second
+  
+##### Steering for wheeled vehicles
+* Motors drive Wheels
+  * Differential Drive
+  * Tri-cycle vehicle
+  * Ackermann Steering
+  * Articulated Vehicle
+
+* "Differential drive"
+  * Steering is achieved by driving wheels at different speeds
+  * Geometry calculations to determine what delta rpm leads to what kind of turn
+  * Usually three wheels, two with motors, one "caster"
+* Tri-cycle steering
+  * Two fixed Wheels
+  * A third wheel with a steerable mount
+* Ackerman Steering
+  * Where the steering is achieved by actual rotation of the wheel mount
+* Articulated Vehicle
+  * Where the vehicle itself has a pivot point
+* Notice that to steer the vehicle an algorithm needs to convert the desired rotation to proportional wheel spinning (we won't get into the geometry calculations.)
+
+##### Other scenarios
+* Tracked vehicles (tanks)
+* Water surface vehicles
+* Under water vehicles
+* Aerial vehicles
+
+#### Terrain
+* Indoor vs. outdoor
+  * Traction and slippage
+  * Weather effects - wet, dry, light, dark
+* Inclines and declines
+  * Needs more force
+  * Also affects levelness
+  * Direction that cameras and sensors are pointed 
+
+##### Work in groups
+* How would you get your robot to drive in a perfect 1 meter square?
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
