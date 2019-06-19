@@ -2,18 +2,65 @@
 title: How do Robots Orient Themselves?
 desc: This is just a template
 homework: 1) foo; 2) bar
-cat: genefundamentals
+cat: fundamentals
 ---
 <%= homework_hdr %>
+
 * Homework One
 
-#### Content:
-* The importance of localizaton?
-* What it means and how it works?
-* Where does the robot think it is?
-* Coordinate systems are required
-* Quaternions
+### Big Idea
 
+<%= include_topic :orient %>
+
+#### Content:
+* Coordinate systems
+  * Where is a robot? How do we designate the location?
+  * If it's a surface moving mobile robot, then an x,y coordinate would seem to be sufficient
+  * We need to determine the units: for us, usually Meters
+  * We need to designate the origin
+  * Anything else?
+
+* What about the "real world"?
+  * Where is that 0,0?
+  * Does it matter?
+
+* What part of the robot are we talking about?
+  * The "middle"?
+  * Who says where the middle is?
+  * Does it matter how high of the ground it is?
+
+* What about where it is pointing?
+  * Is that part of the orientation?
+  * What does it mean to tell the robot to rotate right or left?
+  * Is that direction also part of the orientation in space?
+  * When would that matter?
+
+* What other aspects of orientation in space?
+  * If the Robot has a camera mounted on it?
+  * If there is an arm?
+  * Robot pushing an elevator button
+
+* Taking action based on orientation. Think about:
+  * Turn Right
+  * Turn North
+  * Point camera in the direction of the sound
+
+* "Pose"
+  * The combination of the robot's position and orientation (direction it is pointing)
+  * Each one has 3 dimensions: x,y,z and r,p,y
+  * x,y,z are cartesian coordinates
+  * r,p,y are Euler coordinates
+
+* Multiple Coordinate systems
+  * Each component of the robot potentially has a coordinate system
+  * Many of them have a fixed relationship to each other
+  * Point 0,0 for the robot's tf might be Point 10,0 for the camera's tf
+  * There are coordinate systems attached to (each) robot
+  * But also to the rest of the "world" the robot knows about
+
+* Converting between coordinate systems
+  * Very common calculation is to convert a certain actual point
+  * From one coordinate system to another
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
