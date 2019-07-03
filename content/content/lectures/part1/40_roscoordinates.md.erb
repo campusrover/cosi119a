@@ -5,12 +5,80 @@ homework: 1) foo; 2) bar
 cat: fundamentals
 ---
 <%= homework_hdr %>
+
 * Homework One
 
-#### Content
-* A series of important data structures related to coordinates
-  * list them from the tutorials
-  * And when they are used
-  
+#### ROS Units and data types
+
+##### Units in ROS
+* In ROS, we use the following units:
+   * Distance: Meter
+   * Velocity: Meters/Second
+   * Angles: Radians (sometimes degrees)
+   * Orientation: Euler angles (roll pitch yaw) or Quaterions
+
+* Euler Angles and Quaterions
+   * Conventional way to represent orientation
+   * Pitch, Roll, Yaw (from airplanes)
+   * Can be radians or angles
+   * Quaterion represents the same, but with 4 numbers
+   * There's an exact conversion between euler angles and Quaterions
+   * For subtle mathematical reasons, when combining a series of rotations, Quaterions work better.
+   
+* Points
+   * x, y, z as float64 (double)
+   * Right Hand Rule
+   * positive x-forward, positive y-left, positive z-up
+ 
+##### Datatypes in ROS
+
+* ROS "messages", also *.msg files
+* Really amount to a C `struct`
+
+* Point (geometry_msgs/Point.msg)
+   * x,y,z: float64
+   * A point in 3D space
+ 
+ * Vector3 (geometry_msgs/Vector3.msg)
+   * x, y, z: float64
+   * Simple, generic representation of 3 float64
+
+ * Orientation (geometry_msgs/Quaternion.msg)
+   * x, y, z, w: float64
+   * An orientation in space, in quaterinion form
+   * Quaterions are another way to express orientation
+
+ * Pose (geometry_msgs/Pose.msg)
+   * position: Point
+   * orientation: Quaternion
+   * A combination of "where" and "facing what way"
+
+* Twist (geometry_msgs/Twist.msg)
+   * linear, angular: Vector3
+   * Velocity in free space, broken into linear and angular
+ 
+#### Review of coordinate system transformations
+
+* An x,y,z is always within a specific coordinate system
+* For example, is it relative to the bottom left corner of the room, or the center of the robot?
+* It is far easier to reason in an appropriate coordiante system
+* As long as there are easy ways to convert back and forth.
+
+##### TF framework in ROS
+* An API to make conversions of coordinates between systems easy amd efficient
+* Coordinate systems are given names, e.g. "world" or "lidar-1"
+* They are organized into a tree
+* Every named tf has just one parent, and unlimited number of chidren
+* TF broadcasts
+   * Any node can report on the relationship between two coordiante system
+   * Generally this is a node who knows something about one or the other.
+   * For example, the node that moved the arm, can report the new relative position
+   * That is, to get from tf "a" to tf "b", add add 10 to the x or rotate 180 degrees around z.
+* TF Listeners
+   * If my node needs to interpret coordinates I might listen to tf messages
+   * Allowing to convert coordinates between any two tfs.
+ 
+
+
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
