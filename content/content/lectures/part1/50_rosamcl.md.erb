@@ -1,5 +1,5 @@
 ---
-title: ROS Coordinates and AMCL
+title: ROS Coordinates and Transforms
 desc: This is just a template
 homework: 1) foo; 2) bar
 cat: general
@@ -7,8 +7,28 @@ cat: general
 <%= homework_hdr %>
 * Homework One
 
-#### Content
-* 
+#### TF
+* TF package in ROS is central
+* It recently was rewritten and shows up as TF2 in many places
+* It is interesting and important to understand in some more detail
+
+##### Review
+* Pose = position and orientation
+* Pose is always with respect of a specific coordinate frame or TF
+* Usually a coordinate begins as the "natural" way to think about It
+  * Angle of obstacle, with respect to the LIDAR
+  * Position a corner, with respect to the whole room
+  * Angle to turn, from the point of view of the robot itself
+  * So when you see phrases like "with respect to", and "from the point of view of" you know these refer to coordinate frames.
+* It is very common to want to see that same point or angle from another's point of view
+  * How bit a turn to I need to point directly away from the wall?
+  * What direction is the nearest door from me?
+* Compare starboard/port and driver vs. passenger side
+
+##### Lets look at some code
+
+
+
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>

@@ -19,7 +19,7 @@ cat: fundamentals
 * Vision detected fixed obstacles
 * How can one obstacle be distinguished from another?
 
-###### Lidar detection
+##### Lidar detection
 * Robot has a 'map' of fixed obstacles
 * Robot compares that map with the apparent, transient, map from Lidar
 * Calculates a probability distribution of where it might be on that map
@@ -39,7 +39,7 @@ cat: fundamentals
 * Note! It has to also figure out where IT is relative to the image
 
 ##### AMCL
-* Advanced Monte Carlo Localization
+* Adaptive Monte Carlo Localization
 * Very sophisticated (and standard) mathematical technique
 * Can be used with different kinds of sensors.
 * Example here is LIDAR.
@@ -58,7 +58,6 @@ cat: fundamentals
 * Move the robot a little and update the map
 * Travel through the relevant region (using e.g. Teleop)
 * Use the map to localize, or where there is no map yet, extend the map.
-
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
