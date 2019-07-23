@@ -8,7 +8,7 @@ cat: fundamentals
 
 <%= homework_hdr %>
 
-1. <%= pdfbadge %> Read ["Real Robots Don't Drive Straight.](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://www.aaai.org/Papers/Symposia/Spring/2007/SS-07-09/SS07-09-020.pdf). After reading the article try and answer the following warmup questions:
+1. <%= pdfbadge %> <%= partbadge %> Read ["Real Robots Don't Drive Straight.](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://www.aaai.org/Papers/Symposia/Spring/2007/SS-07-09/SS07-09-020.pdf). After reading the article try and answer the following warmup questions:
    1. In naval navigation there is a term *dead reconning*. Explains what this means and how it relates if at all to the paper.
    1. So why then do real robots not drive straight?
    1. Please mention two concepts or topics or ideas that didn't make sense to you and your major take-away(s)
@@ -30,7 +30,9 @@ cat: fundamentals
       * [Look here fore the message definition](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/LaserScan.html)
       * `rostopic echo --noarr -c /scan`
       * `roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch`
-* Show code example of Lidar data
+
+* Show code example of Lidar data: Jupyter Notebook: ScanData Logger
+
 * Subtleties:
    * What do the directions mean?
    * Are the directions absolute or relative?
