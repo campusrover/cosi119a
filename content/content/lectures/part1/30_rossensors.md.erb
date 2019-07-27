@@ -1,15 +1,19 @@
 ---
 title: Using ROS Sensors
 desc: How do we use sensor data to actually do something useful?
-homework: 1) foo; 2) bar
+homework: 1) Answer posed questions; 
 cat: fundamentals
 ---
 <%= homework_hdr %>
 
-#### Discussion
+1. <%= pdfbadge %> I want you to use your intuition and your knowledge of geometry. Try to understand the data that comes from the LIDAR. You can think of them as "rays" that go in all directions. The data you get back is an array of distances to the first obstacle. Using words, diagrams and/or pseudo code, try and answer:
+    * Think: Given these sensors how would you detect that you are about the crash into a wall?
+    * Think: How would you compute the angle at which you are approaching the wall?
+    <% deliverable "Submit your response as a pdf" %>
+2. Read: [Wall Following Algorithms Paper](https://github.com/ssscassio/ros-wall-follower-2-wheeled-robot/blob/master/report/Wall-following-algorithm-for-reactive%20autonomous-mobile-robot-with-laser-scanner-sensor.pdf)
 
-* Think: Given these sensors how would you detect that you are about the crash into a wall?
-* Think: How would you compute the angle at which you are approaching the wall?
+#### Discussion
+* Lets talk over your answers to the homework questions.
 
 #### How it works in ROS
 * All your code (almost) in ROS is a node
@@ -28,7 +32,7 @@ cat: fundamentals
   * A node subscribes to that topic
   * Writes a "handler" which is invoked each time the sensor node publishes
 
-#### Example: Lidar
+#### Example: 
 
 
 
