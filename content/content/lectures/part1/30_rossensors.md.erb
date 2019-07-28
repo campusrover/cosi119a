@@ -15,7 +15,7 @@ cat: fundamentals
 #### Discussion
 * Lets talk over your answers to the homework questions.
 
-#### How it works in ROS
+#### Review How it works in ROS
 * All your code (almost) in ROS is a node
 * All information (almost) is transferred in the form of messages
 * Sensors
@@ -32,10 +32,23 @@ cat: fundamentals
   * A node subscribes to that topic
   * Writes a "handler" which is invoked each time the sensor node publishes
 
-#### Example: 
+#### Example - Simple "Roomba" pattern
 
+Roomba is iRobot's robotic vacuum cleaner. It seems to just drive forward until it gets to a wall and then turn some amount and then continue. We want to think through a simplistic version of this pattern.
 
+##### Design
+* Loop forever
+    * While there a wall ahead
+        * Rotate in place
+    * Move forward until there's a wall ahead 
 
+##### Discussion about this approach
+* What questions need to be answered?
+* Wil it work?
+
+##### Lets look at some code
+`prrexamples/pid_driver4.py`
+`prrexamples/pid_range.py`
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
