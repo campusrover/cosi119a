@@ -11,6 +11,7 @@ hw: fundamentals
 #### Steering Wheeled vehicles
 
 ##### Our goal
+* Focusing for now on autonomous, ground based mobile robots. But principles apply
 * Software needs to be able to command the robot
 * Consider micro and macro
   * Steer from Waltham to Boston
@@ -20,10 +21,12 @@ hw: fundamentals
   * Turn a corner
   * Make a 90 degree turn
   * Simply drive in a straight line
+<%= discussion_box "Lets take each of these in turn. "%>
 * At the micro level:
   * Move at x Meters/second
   * Turn at 10 degrees/second
-  
+ <%= discussion_box "Lets take each of these in turn. "%>
+ 
 ##### Steering for wheeled vehicles
 * Motors drive Wheels
   * Differential Drive
@@ -58,6 +61,19 @@ hw: fundamentals
   * Needs more force
   * Also affects levelness
   * Direction that cameras and sensors are pointed 
+
+#### Sensors
+* The role of sensors in controlling motion
+* Self-sensors (like odometry)
+* External sensors (like LIDAR)
+* Review of dead reconning
+* Review of "real robots don't drive straight"
+
+#### Role of Feedback: PID
+
+<%= include_topic :pid_control %>
+
+#### Role of feedback: Kalman Filters
 
 ##### Work in groups
 * How would you get your robot to drive in a perfect 1 meter square?

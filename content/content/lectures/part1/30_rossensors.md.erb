@@ -7,15 +7,15 @@ cat: fundamentals
 <%= homework_hdr %>
 
 1. <%= pdfbadge %> I want you to use your intuition and your knowledge of geometry. Try to understand the data that comes from the LIDAR. You can think of them as "rays" that go in all directions. The data you get back is an array of distances to the first obstacle. Using words, diagrams and/or pseudo code, try and answer:
-    * Think: Given these sensors how would you detect that you are about the crash into a wall?
-    * Think: How would you compute the angle at which you are approaching the wall?
-    <% deliverable "Submit your response as a pdf" %>
-2. Read: [Wall Following Algorithms Paper](https://github.com/ssscassio/ros-wall-follower-2-wheeled-robot/blob/master/report/Wall-following-algorithm-for-reactive%20autonomous-mobile-robot-with-laser-scanner-sensor.pdf)
+    * Given a single LIDAR sensor how would you detect that you are about the crash into a wall?
+    * How would you compute the angle at which you are approaching the wall?
+    <%= deliverable "Submit your response as a pdf. Points off for a superficial answer." %>
+2. <%= partbadge %> <%= pdfbadge %> Read: [Wall Following Algorithms Paper](https://github.com/ssscassio/ros-wall-follower-2-wheeled-robot/blob/master/report/Wall-following-algorithm-for-reactive%20autonomous-mobile-robot-with-laser-scanner-sensor.pdf). Write up what your major takeaways are from this paper. <%= deliverable "1 page max pdf writeup" %>
 
 #### Discussion
 * Lets talk over your answers to the homework questions.
 
-#### Review How it works in ROS
+#### Review - how it works in ROS
 * All your code (almost) in ROS is a node
 * All information (almost) is transferred in the form of messages
 * Sensors
