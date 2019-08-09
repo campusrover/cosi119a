@@ -1,18 +1,17 @@
 ---
 title: Using ROS Sensors
 desc: How do we use sensor data to actually do something useful?
-homework: 1) Answer posed questions; 
+homework: ; 1) Read Chapter 7 of PRR; 2) Answer intuition questions; 3) Read and comment on Wall Following paper
 cat: fundamentals
 ---
 <%= homework_hdr %>
 
+1. <%= partbadge %> **Read**: Read Chapter 7 of PRR and remember to refer to <%= link_to_topic :wander_bot %> as you try to understand and test out the code. Believe me you won't really understand the chapter until you get the code to run!
 1. <%= pdfbadge %> **Lidar**: I want you to use your intuition and your knowledge of geometry. Try to understand the data that comes from the LIDAR. You can think of them as "rays" that go in all directions. The data you get back is an array of distances to the first obstacle. Using words, diagrams and/or pseudo code, try and answer:
     * Given a single LIDAR sensor how would you detect that you are about the crash into a wall?
     * How would you compute the angle at which you are approaching the wall?
     <%= deliverable "Submit your response as a pdf. Points off for a superficial answer." %>
 2. <%= partbadge %> <%= pdfbadge %> **Read**: [Wall Following Algorithms Paper](https://github.com/ssscassio/ros-wall-follower-2-wheeled-robot/blob/master/report/Wall-following-algorithm-for-reactive%20autonomous-mobile-robot-with-laser-scanner-sensor.pdf). Write up what your major takeaways are from this paper. <%= deliverable "1 page max pdf writeup" %>
-3. <%= partbadge %> **Read**: Read Chapter 7 of PRR and remember to refer to <%= link_to_topic :wander_bot %> as you try to understand and test out the code. Believe me you won't really understand the chapter until you get the code to run!
-
 
 #### Discussion
 * Lets talk over your answers to the homework questions.
@@ -33,6 +32,9 @@ cat: fundamentals
 * Acting on the sensor data
   * A node subscribes to that topic
   * Writes a "handler" which is invoked each time the sensor node publishes
+
+
+<%= include_topic :wander_bot %>
 
 #### Example - Simple "Roomba" pattern
 
