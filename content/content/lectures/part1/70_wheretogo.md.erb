@@ -1,0 +1,108 @@
+---
+title: How do Robots Know Where To Go?
+desc: How does a robot decide what to do, execute a plan of action?
+homework: 1) foo; 2) bar
+cat: general
+---
+<%= include_topic :wheretogo %>
+
+<%= homework_hdr %>
+
+* <%= zipbadge %> **TB3 Slam** Do <%= link_to_topic :hw_turtlebot3_slam %>
+
+#### Concepts 
+
+* Prerequisites
+    * We need coordinate systems within which to place the robot and the obstacles
+    * We need maps to show where the robot can and cannot go
+    * We need localization so that the robot can know where it is at any point
+    * We need sensors to detect obstacles which may not be on the map
+    * We need a way to propel and steer the robot
+* Requirement
+    * Given a destination coordinate, drive the robot to the destination
+    * Find the least "cost" route to use
+    * Don't crash into known obstacles (or get stuck)
+    * Don't crash into unexpected obstacles (or get stuck)
+
+##### Mapping Theory
+
+* What is required of a map?
+    * A set of locations
+    * A set of connections between adjacent locations
+    * A "cost" to get from one location to the next
+    * Information to allow navigating (driving) from one location to the next
+
+* **Topological Representation**
+    * Very simple network diagram
+    * Well known how to search and analyze it
+    * Could be useful for path planning
+    * Works out in a scenario like a subway or road network
+    * On the surface not so good for an open field of navigation
+
+* **metric representation**
+    * Precise coordinates
+    * 
+
+* Creating the maps
+    * Often a map will be known (i.e. a floorplan)
+    * Sometimes a map can be built by the robot (SLAM)
+    * SLAM creates a "metric" representation
+
+##### Localization Theory
+* Global
+    * Location with respect to the world (coordinate system)
+    * Example: GPS or WiFi hotspots
+    * Can be quite inaccurate
+
+* Local
+    * Location with rspect to sensor feedback
+    * Can be highly accurate
+
+#### ROS Navigation Stack
+
+##### Path Planning
+
+* Using a topological Representation
+* Network search can find the best path through the network
+* You are optimizing relative to some parameter - distance, time, risk, etc.
+
+##### ROS Navigation Stack
+
+* 2D navigation
+* Inputs
+  * Odometry
+  * Sensro Data
+  * Goal Pose
+  * Map
+* Output
+  * "Safe" velocity command
+
+* Limitations
+  * Only for differential drive or holonomic wheeled robots
+  * Requires a Lidar
+  * Needs a square or circular robot (base)
+
+##### Key Node: move_base
+* Implements a ROS action (recall they are for longer term tasks)
+* Uses a global and local planner
+* Highly modular allowing different implementation and algorithms.
+
+**diagram**
+
+* Move_base implements action: Go from whereever you are now to this goal
+* Inputs into the move_base node
+  * map_server: if present delivers the geometry of the map. What is clear, obstructed, inpassible, or unknown
+  * sensor sources: Lidar gives information about nearby obstacles in the real world
+  * odometry: Gives information about "dead reconning" prediction of robot's location
+  * amcl: Gives information about localization based on amcl
+* Outputs:
+  * base_controller: cmd_vel topic published
+* Behavior:
+  * Attempt to go to the requested destination within user-specified tollerance
+  * Do optimal path planning, recompute the plan constantly
+  * Engage in recovery behaviors
+
+**Reference:[move_base Wiki](http://wiki.ros.org/move_base?distro=melodic)**
+
+#### Next Class
+* Look at homework: <%= link_to_next_lecture %>
