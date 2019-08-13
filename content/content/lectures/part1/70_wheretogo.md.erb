@@ -24,29 +24,37 @@ cat: general
     * Don't crash into known obstacles (or get stuck)
     * Don't crash into unexpected obstacles (or get stuck)
 
-##### Mapping Theory
+##### Maps
 
-* What is required of a map?
-    * A set of locations
-    * A set of connections between adjacent locations
-    * A "cost" to get from one location to the next
-    * Information to allow navigating (driving) from one location to the next
+<img src="/content/topics/images/subwaymap.png" class="img-responsive img-thumbnail" style="height: 300px;">
 
-* **Topological Representation**
-    * Very simple network diagram
-    * Well known how to search and analyze it
-    * Could be useful for path planning
-    * Works out in a scenario like a subway or road network
-    * On the surface not so good for an open field of navigation
+* A set of locations
+* A set of connections between adjacent locations
+* A "cost" to get from one location to the next
+* Information to allow navigating (driving) from one location to the next
 
-* **metric representation**
-    * Precise coordinates
-    * 
+##### Topological Representation
 
-* Creating the maps
-    * Often a map will be known (i.e. a floorplan)
-    * Sometimes a map can be built by the robot (SLAM)
-    * SLAM creates a "metric" representation
+<img src="/content/topics/images/graphmap.png" class="img-responsive img-thumbnail" style="height: 300px">
+
+* Very simple network diagram
+* Well known how to search and analyze it
+* Could be useful for path planning
+* Works out in a scenario like a subway or road network
+* On the surface not so good for an open field of navigation
+
+##### metric representation
+
+<img src="/content/topics/images/metricmap.png" class="img-responsive img-thumbnail" style="height: 300px;">
+
+* Precise coordinates
+* But takes up much more storage
+* Typical datastructure is an "occupancy map" 
+
+##### Creating the maps
+* Often a map will be known (i.e. a floorplan)
+* Sometimes a map can be built by the robot (SLAM)
+* SLAM creates a "metric" representation
 
 ##### Localization Theory
 * Global
@@ -87,7 +95,9 @@ cat: general
 * Uses a global and local planner
 * Highly modular allowing different implementation and algorithms.
 
-**diagram**
+**MOVE_BASE Architecture**
+
+<img src="http://wiki.ros.org/move_base?action=AttachFile&do=get&target=overview.png" style="width:800px">
 
 * Move_base implements action: Go from whereever you are now to this goal
 * Inputs into the move_base node
@@ -102,7 +112,7 @@ cat: general
   * Do optimal path planning, recompute the plan constantly
   * Engage in recovery behaviors
 
-**Reference:[move_base Wiki](http://wiki.ros.org/move_base?distro=melodic)**
+**Reference: [move_base Wiki](http://wiki.ros.org/move_base?distro=melodic)**
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
