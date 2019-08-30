@@ -8,7 +8,13 @@ cat: fundamentals
 
 <%= homework_hdr %>
 
-1. <%= partbadge %> **Reading**:  PRR - Chapters 1,2 (Follow along - <%= link_to_topic :ros_intro %>, <%= link_to_topic :ros_fundamentals %>)
+1. <%= partbadge %> **Reading**:  PRR - Chapters 1,2 (Follow along - <%= link_to_topic :ros_intro %>, <%= link_to_topic :ros_fundamentals %>). After doing this please answer the following warmup questions:
+    * It is said that ROS nodes communicate peer to peer. What does this mean?
+    * If a ROS node is running on a robot and another one is running on my laptop, how do they even talk to each other?
+    * In what way is a robot `pose` different from its `position`?
+    * What one or two things are you still totally confused about in this reading? If its all clear, then what are your biggest takeaways from this reading?
+    * <%= deliverable "Submit warmup questions in Latte" %> as a pdf.
+
 1. <%= zipbadge %> **Programming Environment**: Demonstrate booting to the SSD. Make a short narrated video with your phone showing your computer booting up into Linux and you running roscore from the shell. If roscore runs you likely have a good install. <%= deliverable "Your short video" %>
 
 <%= include_topic :ros_intro %>
