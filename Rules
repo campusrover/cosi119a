@@ -8,29 +8,12 @@ compile '/bootstrap/**/*' do
   nil
 end
 
-compile '/extras/**/*' do
-  nil
-end
-
-compile '/content/topics/robotcode/**/*' do
-  nil
-end
-
 compile '/content/scripts/**/*' do
   nil
 end
 
-route '/tipuesearch/**/*' do
-  @item.identifier.to_s
-end
-
-route "/content/tipuesearch/tipuesearch_content.*" do
-  '/tipuesearch/tipuesearch_content.js'
-end
-
-# Output the search page
-route '/tipuesearch/search.md.erb' do
-  '/tipuesearch/search/index.html'
+compile "/content/tipuesearch/tipuesearch_content.js.erb" do
+  filter :erb
 end
 
 compile '/**/*.ical.erb' do
@@ -40,7 +23,7 @@ end
 compile '/**/*.{md,ical}.erb' do
   if item[:status] != "hidden"
     filter :erb
-    filter :kramdown, coderay_line_numbers: nil
+    filter :kramdown
     layout '/course.*'
   else
     nil
