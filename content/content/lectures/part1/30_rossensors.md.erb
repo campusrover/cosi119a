@@ -6,7 +6,12 @@ cat: fundamentals
 ---
 <%= homework_hdr %>
 
-1. <%= partbadge %> **Read**: Read Chapter 7 of PRR and remember to refer to <%= link_to_topic :wander_bot %> as you try to understand and test out the code. Believe me you won't really understand the chapter until you get the code to run!
+1. <%= partbadge %> **Read**: Read Chapter 7 of PRR and remember to refer to <%= link_to_topic :wander_bot %> as you try to understand and test out the code. Believe me you won't really understand the chapter until you get the code to run! Consider the following warmup questions:
+    1. What precisely is the difference between a topic and a message?
+    1. What code do I write if I want to print out the direction that the robot is pointing right now?
+    1. What frame of reference (or, where is the origin) relative to which you are printing out the direction, and what units is it in?
+    1. Please write one or two things that are still confusing to you; if it's all clear, then please write one or two major takeaways.
+    <%= deliverable "Your responses to the above questions, in brief, in a pdf with your name and homework number at the top." %>
 1. <%= pdfbadge %> **Lidar**: I want you to use your intuition and your knowledge of geometry. Try to understand the data that comes from the LIDAR. You can think of them as "rays" that go in all directions. The data you get back is an array of distances to the first obstacle. Using words, diagrams and/or pseudo code, try and answer:
     * Given a single LIDAR sensor how would you detect that you are about the crash into a wall?
     * How would you compute the angle at which you are approaching the wall?
