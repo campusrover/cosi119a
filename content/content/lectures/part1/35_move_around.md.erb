@@ -68,6 +68,15 @@ homework: 1) Read PRR Chapters 8, 9; 2) Do Roomba Roamer Homework
   * Where the vehicle itself has a pivot point
 * Notice that to steer the vehicle an algorithm needs to convert the desired rotation to proportional wheel spinning (we won't get into the geometry calculations.)
 
+#### Firmware
+* Software and hardware architecture
+* cmd_vel: needs to convert from high level units to motor commands
+* odom: needs to convert from sensors (motor decoder and others) into coordinates
+* Big deal is being aware of known errors from the manufacturer
+* We wont go into the detailed geometry and math but it is very well studied and undertood
+* Our motors are Robotis Dynamixel. These seem super common.
+* [Dynamixel Spec Sheet](http://emanual.robotis.com/docs/en/dxl/x/xl430-w250/)
+
 ##### Other scenarios
 * Tracked vehicles (tanks)
 * Water surface vehicles
@@ -87,6 +96,7 @@ homework: 1) Read PRR Chapters 8, 9; 2) Do Roomba Roamer Homework
 * The role of sensors in controlling motion
 * Self-sensors (like odometry)
 * External sensors (like LIDAR)
+* Our Robotis TB3 Burger uses [HLS-LFCD2](https://dabit.industries/products/360-laser-distance-sensor-lds-01-lidar)
 * Review of dead reconning
 * Review of "real robots don't drive straight"
 
