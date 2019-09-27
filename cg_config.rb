@@ -38,3 +38,5 @@ SECTION_CONFIG = [
 STYLING_CONFIG = {bullet_style: %("font-size: 60%; width: 10px; color: grey")}.freeze
 HOME_PAGE = "/content/intro/05_syllabus.md.erb".freeze
 HELPFUL_BOX = false
+LAB_NOTE_COLOR = "red"
+LAB_NOT_FONT="Permanent+Marker"
