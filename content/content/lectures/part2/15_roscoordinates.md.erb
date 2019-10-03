@@ -12,12 +12,20 @@ cat: fundamentals
    * Matthew Milendorf - Jacob Smith
    * Tirtho Aungon - Christopher Tan
    * Zekai Wang - Maxwell Hunslinger
-   * Luis Andino - Benjamin Mallintyn
+   * Luis Andino - Benjamin Mallintyn  
    * Addison Phita - Jade Garish
    * Zhidong Liu - Danbing Chen
 
+#### Discussion about projects
+
+
+* "Post-it Note" exercise
+* List on the board the projects and teams that are in Discussion
+* Discuss what makes a good project and how many people is appropriate
+* Lets look at <%= link_to_section :lab, :project_list %>
 
 #### Coordinate Systems:
+
 * Coordinate systems
   * Where is a robot? How do we designate the location?
   * If it's a surface moving mobile robot, then an x,y coordinate would seem to be sufficient
@@ -78,10 +86,12 @@ cat: fundamentals
 * Euler Angles and Quaterions
    * Conventional way to represent orientation
    * Pitch, Roll, Yaw (from airplanes)
-   * Can be radians or angles
+   * Can be radians or angles, but for ROS poses, it's radians
+   * Reminder: Radians go from 0 (0 degrees) to 2 * PI (360 degrees == 0 degrees)ss
    * Quaternion represents the same, but with 4 numbers
    * There's an exact conversion between Euler angles and Quaterions
-   * For subtle mathematical reasons, when combining a series of rotations, Quaterions work better.
+   * For subtle mathematical reasons, when combining a series of rotations, Quaterions work better
+   * Don't try to interpret the x,y,z,r of a quaternion, it doesn't have an intuitive mapping to x,y and z euler angles.
    
 * Points
    * x, y, z as float64 (double)
