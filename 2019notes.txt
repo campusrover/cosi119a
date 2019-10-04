@@ -1,0 +1,29 @@
+#### Feedback
+
+##### Content
+* More robot specific examples of actions and services early on
+* Strategies to solve problems in addition to examples.
+* More demonstrations of "new" things, e.g. sensors, arm, etc
+* Show how to use other packages, e.g. pid
+* More code walkthrough and explanations of code
+
+##### labs
+* More troubleshooting instructions
+* More guided labs (there seem to be people falling behind)
+
+##### Assignments
+* Clearer grading and rubrics - whats the difference between a 97 and 100? (2x)
+* Less frequent, and harder assignments
+* Slower pace for larger deliverables (2x)
+* Like the assignments - difficult but doable
+* Review code after submission so that we can learn and improve
+* Let us form teams ourselves
+* More feedback on assignments
+
+##### Classroom
+* More relaxed in lecture
+* More diverse students
+* More experimental, less theoretical
+* More papers to read
+* In class tutorials of all mathematical concepts
+
