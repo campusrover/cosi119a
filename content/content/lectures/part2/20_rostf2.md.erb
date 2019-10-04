@@ -8,12 +8,11 @@ cat: general
 
 * Homework TBD
 
-#### TF
-* TF package in ROS is central
-* It recently was rewritten and shows up as TF2 in many places
-* It is interesting and important to understand in some more detail
-
 ##### Review
+* An x,y,z is always within a specific coordinate system
+* For example, is it relative to the bottom left corner of the room, or the center of the robot?
+* It is far easier to reason in an appropriate coordinate system
+* As long as there are easy ways to convert back and forth.
 * Pose = position and orientation
 * Pose is always with respect of a specific coordinate frame or TF
 * Usually a coordinate begins as the "natural" way to think about It
@@ -25,6 +24,26 @@ cat: general
   * How bit a turn to I need to point directly away from the wall?
   * What direction is the nearest door from me?
 * Compare starboard/port and driver vs. passenger side
+
+#### TF
+* TF package in ROS is central
+* It recently was rewritten and shows up as TF2 in many places
+* It is interesting and important to understand in some more detail
+
+##### TF framework in ROS
+* An API to make conversions of coordinates between systems easy and efficient
+* Coordinate systems are given names, e.g. "world" or "lidar-1"
+* They are organized into a tree
+* Every named tf has just one parent, and unlimited number of children
+* TF broadcasts
+   * Any node can report on the relationship between two coordinate system
+   * Generally this is a node who knows something about one or the other.
+   * For example, the node that moved the arm, can report the new relative position
+   * That is, to get from tf "a" to tf "b", add add 10 to the x or rotate 180 degrees around z.
+* TF Listeners
+   * If my node needs to interpret coordinates I might listen to tf messages
+   * Allowing to convert coordinates between any two coordinate frames.
+
 
 ##### Lets look at some code
 * Review the series of [ROS TF2 Tutorials](http://wiki.ros.org/tf2/Tutorials) Together

@@ -126,26 +126,5 @@ cat: fundamentals
    * linear, angular: Vector3
    * Velocity in free space, broken into linear and angular
  
-#### Review of coordinate system transformations
-
-* An x,y,z is always within a specific coordinate system
-* For example, is it relative to the bottom left corner of the room, or the center of the robot?
-* It is far easier to reason in an appropriate coordinate system
-* As long as there are easy ways to convert back and forth.
-
-##### TF framework in ROS
-* An API to make conversions of coordinates between systems easy and efficient
-* Coordinate systems are given names, e.g. "world" or "lidar-1"
-* They are organized into a tree
-* Every named tf has just one parent, and unlimited number of children
-* TF broadcasts
-   * Any node can report on the relationship between two coordinate system
-   * Generally this is a node who knows something about one or the other.
-   * For example, the node that moved the arm, can report the new relative position
-   * That is, to get from tf "a" to tf "b", add add 10 to the x or rotate 180 degrees around z.
-* TF Listeners
-   * If my node needs to interpret coordinates I might listen to tf messages
-   * Allowing to convert coordinates between any two coordinate frames.
-
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
