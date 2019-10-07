@@ -98,6 +98,28 @@ $ rosrun tf tf_echo /world /turtle1
 
 #####  Lets see how all this works: tf2_listener
 
+* Examine the code in prrexamples: `tf2_demo.launch` and `turtle_tf2_listener.py`
+<%- code_begin %>
+$ roslaunch learning_tf2 start_demo.launch
+$ rosrun tf tf_echo /world /turtle1
+$ rosrun tf tf_echo /world /turtle2
+<%= code_end %>
+
+##### tf2 frames are organized in a tree
+
+<%= code_begin %>
+$ rosrun tf2_tools view_frames.py
+$ evince frames.pdf
+<%= code_end %>
+* No cycles, one root
+* This ensures that there's only one path from one frame to another
+* Which ensure that we can compute the transform by following that path
+* New frame would be added as a child of an existing frame
+* How to decide what the parent frame should be?
+* Its the one that has the most obvious and simple transform
+
+##### Adding a frame
+
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
