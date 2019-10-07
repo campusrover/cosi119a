@@ -1,10 +1,8 @@
 digraph G {
-"base_footprint" -> "base_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1565453521.084 sec old)\nBuffer length: 0.000 sec\n"];
-"base_link" -> "caster_back_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1565453521.084 sec old)\nBuffer length: 0.000 sec\n"];
-"base_link" -> "imu_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1565453521.084 sec old)\nBuffer length: 0.000 sec\n"];
-"base_link" -> "base_scan"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1565453521.084 sec old)\nBuffer length: 0.000 sec\n"];
+"world" -> "turtle1"[label=" Broadcaster: /turtle1_tf2_broadcaster\nAverage rate: 62.707\nBuffer length: 4.928\nMost recent transform: 1570380569.24\nOldest transform: 1570380564.32\n"];
+"world" -> "turtle2"[label=" Broadcaster: /turtle2_tf2_broadcaster\nAverage rate: 62.708\nBuffer length: 4.928\nMost recent transform: 1570380569.24\nOldest transform: 1570380564.32\n"];
 edge [style=invis];
  subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 1565453521.084"[ shape=plaintext ] ;
- }->"base_footprint";
+"Recorded at time: 1570380569.26"[ shape=plaintext ] ;
+}->"world";
 }
