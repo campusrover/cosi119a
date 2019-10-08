@@ -18,7 +18,7 @@ LECTURES_SCHEDULE_CONFIG = ScheduleDef.new(
   number: 26,
   start_times: ["12:30", "12:30"],
   end_times: ["13:50", "13:50"],
-  skips: ["oct-1-2019"],
+  skips: ["oct-1-2019", "oct-15-2019"],
   start_time: "12:30",
   end_time: "13:50")
 
