@@ -2,7 +2,7 @@
 #   watch(%r{file/path}) { `command(s)` }
 #
 guard :shell do
-  directories %w(. /mydev/cg-topics)
+  directories %w(. /Users/pitosalas/mydev/cg-topics)
   watch(/.erb/) { |m| `cg compile` }
   watch(/.rb/) { |m| `cg compile` }
   watch(/Rules/) { |m| `cg compile` }
