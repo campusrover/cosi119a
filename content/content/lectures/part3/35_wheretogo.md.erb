@@ -17,21 +17,33 @@ cat: general
 
 ####  Quiz
 
-<%= callout("Quiz", " 60 minutes for quiz.") %>
+<%= callout("Quiz", " 45 minutes for quiz.") %>
 
 #### Concepts 
 
-* Prerequisites
-    * We need coordinate systems within which to place the robot and the obstacles
-    * We need maps to show where the robot can and cannot go
-    * We need localization so that the robot can know where it is at any point
-    * We need sensors to detect obstacles which may not be on the map
-    * We need a way to propel and steer the robot
-* Requirement
-    * Given a destination coordinate, drive the robot to the destination
-    * Find the least "cost" route to use
-    * Don't crash into known obstacles (or get stuck)
-    * Don't crash into unexpected obstacles (or get stuck)
+###### Objective
+
+* Given an 'outside' command, make a robotic device move to a known destination
+    * Robotic device: could be a land-based robot, a arial robot, a robot arm
+    * Really: Any component which can be moved from one location to another location
+    * Do this reliably under a variety of conditions
+
+* Do this safely
+    * Avoid "prohibited" states
+    * Might be: contact with a wall, with itself, with an unknown obstacle
+    * Avoid prohibited motions
+    * Might be a maximum speed
+
+* Do this efficiently
+    * Some notion of cost that is minimized
+    * Time, power consumption
+
+##### Prerequisites - some or all
+* We need coordinate systems within which to place the device and  obstacles
+* We need maps to show where the device can and cannot go
+* We need localization so that the robot can know where it is at any point
+* We need sensors to detect obstacles which may not be on the map
+* We need a way to propel and steer the device
 
 ##### Maps
 
@@ -74,6 +86,8 @@ cat: general
 * Local
     * Location with rspect to sensor feedback
     * Can be highly accurate
+
+* Note the role of filters such as Kalman filter to refine noisy sensor data
 
 #### ROS Navigation Stack
 
