@@ -15,10 +15,10 @@ COURSE_ABBREV = "cs119a".freeze
 LECTURES_SCHEDULE_CONFIG = ScheduleDef.new(
   first_day: "aug-30-2019",
   weekdays: [:tuesday, :friday],
-  number: 27,
+  number: 28,
   start_times: ["12:30", "12:30"],
   end_times: ["13:50", "13:50"],
-  skips: ["oct-1-2019", "oct-15-2019"],
+  skips: ["oct-1-2019", "oct-15-2019", "nov-29-2019"],
   start_time: "12:30",
   end_time: "13:50")
 
