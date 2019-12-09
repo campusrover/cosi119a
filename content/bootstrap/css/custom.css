@@ -1,8 +1,12 @@
 @import url("prettyquote.css");
 @import url("full-width-pics.css");
+@import url(//fonts.googleapis.com/css?family=Telex);
 @import url("postit.css");
-@import url("decorations.css");
-@import url(//fonts.googleapis.com/css?family=Telex|Permanent+Marker);
+@import url("toasty.css");
+
+body {
+	padding-bottom: 40px;
+}
 
 .themefg {
   color: rgb(64,56,207);
@@ -14,26 +18,7 @@
 .nav-menus {
   height: 0px;
 }
-
-.navbar-inverse .navbar-nav > li > a {
-  padding-top: 4px;
-  padding-bottom: 0px;
-  color: white;
-}
-.navbar-inverse {
-	background-color: #3193d4;
-	border-color: #080808;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover {
-  font-weight: bold;
-}
-
-a {
- color: rgb(64,56,207);
-}
-
-.navbar a.navbar-title {
+.masthead a {
   font-family: telex;
   float: left;
   margin-top: 20px;
@@ -49,7 +34,7 @@ a {
   padding: 4px 10px;
   color: white;
 }
-~
+
 .nav-menus a.navbar-brand:hover {
   font-weight: bold;
 }
@@ -99,41 +84,42 @@ h4 {
 }
 
 h5 {
-	margin-top: 15px;
-  text-transform: uppercase;
-}
-
-body {
-	padding-top: 40px;
-	padding-bottom: 40px;
+margin-top: 15px;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 footer {
 	padding-top: 20px;
 }
 
-.right-nav ul {
+.sidebar {
+	background-color: rgb(247,241, 213);
+	margin-top: 20px;
+}
+
+.sidebar ul {
 	list-style: none;
 	padding-left: 12px;
 	margin-top: 3px
 }
 
-.right-nav label.level2 {
+.sidebar label.level2 {
 	margin-bottom: 0px;
 }
 
-.right-nav a {
+.sidebar a {
 	font-size: 85%;
 }
 
-.right-nav label.level1 {
+.sidebar label.level1 {
 	text-transform: uppercase;
 	color: grey;
 	margin-top: 10px;
 	margin-bottom: 3px;
 }
 
-.right-nav label.level2 {
+.sidebar label.level2 {
 	font-weight: normal;
 }
 
