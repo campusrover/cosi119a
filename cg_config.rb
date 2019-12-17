@@ -40,3 +40,8 @@ HOME_PAGE = "/content/intro/05_syllabus.md.erb".freeze
 HELPFUL_BOX = false
 LAB_NOTE_COLOR = "red"
 LAB_NOT_FONT="Permanent+Marker"
+MENULINKS = [["TOC", "/content/intro/10_course_toc.md/"],
+             ["Lab Notebook", "https://campus-rover.gitbook.io/lab-notebook/"],
+             ["TB3 Manual","http://emanual.robotis.com/docs/en/platform/turtlebot3/overview/"],
+             ["Final Project", "/content/topics/syllabus/cosi119a_final_project.md/"]].freeze
+             
