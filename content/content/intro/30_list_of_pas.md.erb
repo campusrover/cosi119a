@@ -1,7 +1,17 @@
 ---
 title: List of Programming Assignments
 ---
+
+#### 2020 Assignments
+
 <%= list_of(source: "topics",
             rows: ["page"],
             subsections: ["/content/topics/robotics_newpa/"],
+            cols: [:title, :desc], items: @items) %>
+
+#### 2019 Assignments
+
+<%= list_of(source: "topics",
+            rows: ["page"],
+            subsections: ["/content/topics/robotics_hw/"],
             cols: [:title, :desc], items: @items) %>
