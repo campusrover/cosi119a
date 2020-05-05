@@ -1,7 +1,7 @@
 require 'coursegen'
 
 # Copyright string
-COPYRIGHT_STRING = "Copyright (2014-2019) R. Pito Salas, pitosalas@brandeis.edu".freeze
+COPYRIGHT_STRING = "Copyright (2014-2020) R. Pito Salas, pitosalas@brandeis.edu".freeze
 
 # bucket for AWS Deployment of the course
 AWS_BUCKET = "cosi119a".freeze
